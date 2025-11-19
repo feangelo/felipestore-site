@@ -10,8 +10,8 @@
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 
         body{
-            background:#050505;
-            color:#f5f5f5;
+            background:#020202;
+            color:#f2f2f2;
         }
 
         header{
@@ -44,27 +44,29 @@
             max-width:900px;
             margin:40px auto 30px;
             background:#0f0f0f;
-            padding:25px 20px 30px;
-            border-radius:10px;
-            box-shadow:0 2px 12px rgba(0,0,0,0.7);
+            padding:35px 28px 40px;
+            border-radius:12px;
+            box-shadow:0 3px 20px rgba(0,0,0,0.7);
         }
 
         h1{
-            font-size:26px;
-            margin-bottom:12px;
+            font-size:28px;
+            margin-bottom:18px;
+            font-weight:700;
         }
 
         h3{
             font-size:18px;
-            margin-top:18px;
-            margin-bottom:6px;
+            margin-top:22px;
+            margin-bottom:8px;
+            color:#00eaff;
         }
 
         p{
-            font-size:14px;
+            font-size:15px;
             line-height:1.7;
-            margin-bottom:6px;
-            color:#e0e0e0;
+            margin-bottom:8px;
+            color:#dcdcdc;
         }
 
         a{
@@ -77,11 +79,11 @@
         }
 
         footer{
-            padding:20px 30px;
+            padding:22px 30px;
             text-align:center;
             background:#0d0d0d;
-            color:#aaa;
-            font-size:13px;
+            color:#999;
+            font-size:14px;
             border-top:1px solid #222;
         }
 
@@ -105,28 +107,28 @@
 
 <div class="legal-wrapper">
     <h1>Política de Privacidade</h1>
-    <p>Levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos seus dados pessoais ao utilizar a FelipeStore.</p>
+    <p>Levamos sua privacidade muito a sério. Esta Política descreve como coletamos, armazenamos, tratamos e protegemos seus dados pessoais ao utilizar a FelipeStore.</p>
 
     <h3>1. Dados coletados</h3>
-    <p>Podemos coletar dados como nome, e-mail, telefone, endereço de entrega, CPF (quando necessário para emissão de nota fiscal) e informações de navegação, como páginas acessadas e tempo de permanência no site.</p>
+    <p>Podemos coletar informações como nome, e-mail, telefone, endereço, CPF (quando necessário), e dados de navegação como páginas acessadas e tempo de permanência.</p>
 
-    <h3>2. Como usamos seus dados</h3>
-    <p>Utilizamos seus dados para processar pedidos, enviar confirmações, oferecer suporte, melhorar a experiência de navegação, apresentar ofertas relevantes e cumprir obrigações legais e fiscais.</p>
+    <h3>2. Uso das informações</h3>
+    <p>Os dados são utilizados para processar pedidos, melhorar sua experiência, enviar notificações, oferecer suporte e cumprir obrigações legais.</p>
 
-    <h3>3. Cookies e tecnologias de rastreamento</h3>
-    <p>Podemos usar cookies e ferramentas de análise para entender melhor como o site é utilizado e melhorar nossa performance. Você pode controlar o uso de cookies nas configurações do seu navegador.</p>
+    <h3>3. Cookies e rastreamento</h3>
+    <p>Utilizamos cookies para melhorar sua experiência e entender o comportamento do usuário. Você pode desabilitar cookies no seu navegador, se desejar.</p>
 
-    <h3>4. Compartilhamento de informações</h3>
-    <p>Não vendemos seus dados pessoais. Eles podem ser compartilhados apenas com parceiros que participam diretamente da operação (por exemplo: meios de pagamento, transporte e plataformas de análise), sempre seguindo padrões de segurança.</p>
+    <h3>4. Compartilhamento de dados</h3>
+    <p>Não vendemos seus dados. Eles são compartilhados apenas com parceiros essenciais, como meios de pagamento e transportadoras.</p>
 
     <h3>5. Segurança</h3>
-    <p>Adotamos boas práticas de segurança para proteger seus dados contra acessos não autorizados, vazamentos ou alterações indevidas. Mesmo assim, nenhum sistema é 100% imune a riscos.</p>
+    <p>Adotamos práticas de segurança para proteger os dados, mas nenhum sistema é totalmente imune a riscos. Mantemos monitoramento constante.</p>
 
-    <h3>6. Direitos do titular de dados</h3>
-    <p>De acordo com a legislação brasileira (LGPD), você pode solicitar acesso, correção ou exclusão dos seus dados pessoais, bem como retirar consentimentos concedidos. Para isso, entre em contato pelos canais oficiais de atendimento da FelipeStore.</p>
+    <h3>6. Direitos do titular (LGPD)</h3>
+    <p>Você pode solicitar acesso, correção ou exclusão de seus dados a qualquer momento. Também pode retirar consentimentos concedidos.</p>
 
     <h3>7. Atualizações desta política</h3>
-    <p>Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente estará sempre disponível nesta página.</p>
+    <p>Podemos alterar esta Política periodicamente. A versão mais recente sempre estará disponível nesta página.</p>
 </div>
 
 <footer>
@@ -137,5 +139,6 @@
 
 </body>
 </html>
+
 
 
