@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Termos de Serviço - FelipeStore</title>
+<style>
+    body { font-family: Arial; padding: 30px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<h1>Termos de Serviço</h1>
+<p>Estes são os Termos de Serviço da FelipeStore.</p>
+<p>Ao usar este site você concorda com estes termos.</p>
+<p>Este site é destinado para demonstração, educação e comércio digital.</p>
+<p>Não coletamos dados sensíveis e não vendemos informações pessoais.</p>
+<p>Contato: suporte@felipestore.site</p>
+</body>
+</html>
