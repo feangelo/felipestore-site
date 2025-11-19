@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Uso - FelipeStore</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-        body{background:#f5f5f5;color:#222;}
-        header{
-            background:#0d0d0d;color:#fff;padding:15px 30px;
-            display:flex;align-items:center;justify-content:space-between;
-        }
-        .logo{font-size:22px;font-weight:700;color:#00eaff;}
-        .legal-wrapper{
-            max-width:900px;margin:40px auto 30px;background:#fff;
-            padding:25px 20px;border-radius:10px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.08);
-        }
-        h1{font-size:26px;margin-bottom:10px;}
-        h3{font-size:18px;margin-top:18px;margin-bottom:6px;}
-        p{font-size:14px;line-height:1.7;margin-bottom:6px;}
-        a{color:#00c4cc;text-decoration:none;}
-        a:hover{text-decoration:underline;}
-        footer{
-            padding:20px 30px;text-align:center;background:#0d0d0d;
-            color:#aaa;font-size:13px;
-        }
-        footer a{color:#00eaff;margin:0 6px;text-decoration:none;}
-        footer a:hover{text-decoration:underline;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso - FelipeStore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body{background:#020202;color:#f2f2f2;}
+    header{
+      background:#0d0d0d;color:#fff;padding:15px 30px;
+      display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid #222;
+    }
+    .logo{font-size:22px;font-weight:700;color:#00eaff;}
+    .back-link{color:#fff;text-decoration:none;font-size:14px;}
+    .back-link:hover{text-decoration:underline;}
+    .wrapper{
+      max-width:900px;margin:40px auto 30px;background:#0f0f0f;
+      padding:35px 28px 40px;border-radius:12px;
+      box-shadow:0 3px 20px rgba(0,0,0,0.7);
+    }
+    h1{font-size:28px;margin-bottom:18px;}
+    h3{font-size:18px;margin-top:22px;margin-bottom:8px;color:#00eaff;}
+    p{font-size:15px;line-height:1.7;margin-bottom:8px;color:#dcdcdc;}
+    footer{
+      padding:22px 30px;text-align:center;background:#0d0d0d;
+      color:#999;font-size:14px;border-top:1px solid #222;
+    }
+    footer a{color:#00eaff;margin:0 6px;text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">FelipeStore</div>
-    <a href="/" style="color:#fff;text-decoration:none;font-size:14px;">← Voltar para a loja</a>
+  <div class="logo">FelipeStore</div>
+  <a class="back-link" href="/">← Voltar para a loja</a>
 </header>
 
-<div class="legal-wrapper">
-    <h1>Termos de Uso</h1>
-    <p>A FelipeStore é uma loja online que oferece uma variedade de produtos para casa, uso pessoal, lazer e bem-estar. Ao acessar e utilizar este site, você concorda com estes Termos de Uso.</p>
+<div class="wrapper">
+  <h1>Termos de Uso</h1>
+  <p>Ao utilizar a FelipeStore, você concorda com os termos abaixo. Recomendamos a leitura atenta antes de navegar e realizar compras.</p>
 
-    <h3>1. Uso do Site</h3>
-    <p>Você se compromete a utilizar este site apenas para fins lícitos e de acordo com a legislação vigente. É proibido tentar burlar sistemas de segurança, acessar áreas restritas ou comprometer o funcionamento da plataforma.</p>
+  <h3>1. Uso do site</h3>
+  <p>Este site tem como objetivo apresentar produtos, campanhas e ofertas da FelipeStore. Qualquer tentativa de uso indevido, fraude ou violação de sistemas de segurança poderá resultar em bloqueio de acesso.</p>
 
-    <h3>2. Informações de Produtos</h3>
-    <p>As descrições e imagens dos produtos têm caráter ilustrativo, mas buscamos sempre apresentar informações claras, atualizadas e verdadeiras. Em caso de dúvida, o cliente pode entrar em contato pelos nossos canais de atendimento.</p>
+  <h3>2. Informações de produtos</h3>
+  <p>Descrições e imagens têm caráter ilustrativo, mas buscamos sempre manter as informações claras, atualizadas e alinhadas com o produto entregue.</p>
 
-    <h3>3. Preços e Pagamentos</h3>
-    <p>Os preços exibidos no site podem ser alterados sem aviso prévio. As condições de pagamento, frete e prazos de entrega serão apresentados durante o processo de compra antes da finalização do pedido.</p>
+  <h3>3. Pagamentos e entregas</h3>
+  <p>Condições de pagamento, prazos de entrega e valores de frete são informados durante o processo de compra, antes da finalização do pedido.</p>
 
-    <h3>4. Trocas e Devoluções</h3>
-    <p>Seguimos o Código de Defesa do Consumidor. Em caso de defeito, arrependimento de compra ou necessidade de troca, o cliente deve entrar em contato dentro dos prazos legais informados na página de atendimento ou no comprovante de compra.</p>
+  <h3>4. Trocas e devoluções</h3>
+  <p>Seguimos o Código de Defesa do Consumidor. Prazo, condições e canais para solicitação de troca ou devolução serão informados na página de atendimento ou no comprovante de compra.</p>
 
-    <h3>5. Propriedade Intelectual</h3>
-    <p>Marcas, logotipos, textos, imagens e outros conteúdos exibidos na FelipeStore são protegidos por direitos autorais e de propriedade intelectual. É proibida a utilização sem autorização expressa.</p>
+  <h3>5. Propriedade intelectual</h3>
+  <p>Todo o conteúdo da FelipeStore (marca, layout, textos, imagens e códigos) é protegido por direitos autorais. É proibida reprodução sem autorização.</p>
 
-    <h3>6. Atualizações destes Termos</h3>
-    <p>Podemos atualizar estes Termos de Uso periodicamente para refletir melhorias ou mudanças na operação da loja. A versão mais recente estará sempre disponível nesta página.</p>
+  <h3>6. Alterações dos termos</h3>
+  <p>Podemos atualizar estes Termos de Uso a qualquer momento. A versão mais recente será sempre a exibida nesta página.</p>
 </div>
 
 <footer>
-    © 2025 FelipeStore — Todos os direitos reservados.
-    <br>
-    <a href="/">Home</a> | <a href="/privacidade.html">Política de Privacidade</a>
+  © 2025 FelipeStore — Todos os direitos reservados.
+  <br>
+  <a href="/">Home</a> | <a href="/privacidade.html">Política de Privacidade</a>
 </footer>
 
 </body>
