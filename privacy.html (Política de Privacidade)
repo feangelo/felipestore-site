@@ -1,109 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade – FelipeStore</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade – FelipeStore</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #ff0033;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        h2 {
+            color: #ff0033;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #ff0033;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body style="
-  margin:0;
-  padding:0;
-  background:#050505;
-  color:#f5f5f5;
-  font-family: Arial, sans-serif;
-">
 
-  <header style="
-    background:#000;
-    padding:20px;
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    color:#00eaff;
-  ">
-    Política de Privacidade – FelipeStore
-  </header>
+<body>
 
-  <main style="
-    max-width:900px;
-    margin:40px auto;
-    background:#111;
-    padding:30px 24px;
-    border-radius:12px;
-    box-shadow:0 0 20px rgba(0, 255, 255, 0.1);
-    line-height:1.7;
-    font-size:16px;
-  ">
+    <header>
+        <h1>Política de Privacidade</h1>
+    </header>
 
-    <h1 style="color:#00eaff; margin-top:0;">Como tratamos seus dados</h1>
-    <p>
-      Esta Política de Privacidade descreve como coletamos, usamos e protegemos as informações
-      dos usuários que acessam o site FelipeStore.
-    </p>
+    <main>
+        <p>
+            Bem-vindo à FelipeStore! A sua privacidade é extremamente importante para nós.
+            Este documento explica com clareza como tratamos seus dados pessoais.
+        </p>
 
-    <h2 style="color:#00eaff;">1. Informações coletadas automaticamente</h2>
-    <p>
-      Podemos registrar dados básicos de acesso, como endereço IP, tipo de navegador, páginas
-      visitadas e horário de acesso. Esses dados são usados apenas para estatísticas, segurança
-      e melhoria da experiência do usuário.
-    </p>
+        <h2>1. Coleta de informações</h2>
+        <p>
+            Coletamos informações fornecidas voluntariamente por você, como nome, e-mail
+            e dados inseridos no momento de compra ou contato.
+        </p>
 
-    <h2 style="color:#00eaff;">2. Dados pessoais fornecidos voluntariamente</h2>
-    <p>
-      Quando você entra em contato conosco ou preenche algum formulário no site, podemos
-      coletar informações como nome, e-mail e mensagem. Esses dados são utilizados
-      exclusivamente para atendimento, suporte e comunicação com você.
-    </p>
+        <h2>2. Uso das informações</h2>
+        <p>
+            As informações que coletamos são utilizadas para:
+        </p>
+        <ul>
+            <li>Processamento de compras</li>
+            <li>Envio de produtos e notificações</li>
+            <li>Atendimento ao cliente</li>
+            <li>Melhorar sua experiência na plataforma</li>
+        </ul>
 
-    <h2 style="color:#00eaff;">3. Compartilhamento de dados</h2>
-    <p>
-      Não vendemos, alugamos ou comercializamos seus dados pessoais. Suas informações
-      só poderão ser compartilhadas quando exigido por lei ou mediante autorização
-      expressa do usuário.
-    </p>
+        <h2>3. Compartilhamento de dados</h2>
+        <p>
+            Não vendemos ou compartilhamos seus dados com terceiros,
+            exceto quando necessário para finalizar seu pedido ou cumprir exigências legais.
+        </p>
 
-    <h2 style="color:#00eaff;">4. Segurança</h2>
-    <p>
-      Adotamos boas práticas de segurança para proteger seus dados contra acessos
-      não autorizados, perda ou alteração indevida. Nenhum sistema é 100% seguro,
-      mas buscamos sempre manter um nível adequado de proteção.
-    </p>
+        <h2>4. Segurança</h2>
+        <p>
+            Utilizamos práticas modernas de segurança e criptografia para manter seus dados protegidos.
+        </p>
 
-    <h2 style="color:#00eaff;">5. Integrações com terceiros</h2>
-    <p>
-      O site FelipeStore pode utilizar serviços de terceiros, como ferramentas de análise de tráfego
-      e APIs de plataformas como o TikTok. Essas integrações são usadas apenas para
-      fins técnicos e de funcionamento do serviço.
-    </p>
+        <h2>5. Atualizações desta política</h2>
+        <p>
+            Podemos atualizar este documento periodicamente. Recomendamos que você consulte
+            esta página sempre que necessário.
+        </p>
 
-    <h2 style="color:#00eaff;">6. Atualizações desta Política</h2>
-    <p>
-      Esta Política de Privacidade pode ser atualizada periodicamente. A versão mais recente
-      estará sempre disponível nesta página, com a data de atualização indicada abaixo.
-    </p>
+        <h2>6. Contato</h2>
+        <p>
+            Caso tenha dúvidas, entre em contato pelo e-mail:
+            <a href="mailto:contato@felipestore.site">contato@felipestore.site</a>
+        </p>
+    </main>
 
-    <p style="margin-top:30px; font-size:14px; color:#bbbbbb;">
-      Última atualização: 19/11/2025
-    </p>
-
-  </main>
-
-  <footer style="
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    color:#aaaaaa;
-    background:#000;
-  ">
-    © 2025 FelipeStore – Todos os direitos reservados.
-  </footer>
-<!-- força atualização -->
-
-
+    <footer>
+        &copy; 2025 FelipeStore – Todos os direitos reservados.
+    </footer>
 
 </body>
 </html>
-<!-- update force -->
+
 
 
 
