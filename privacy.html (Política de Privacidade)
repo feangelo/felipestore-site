@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Política de Privacidade - FelipeStore</title>
-<style>
-    body { font-family: Arial; padding: 30px; line-height: 1.6; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade • FelipeStore</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050509;
+      color: #f9fafb;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+    }
+    .shell {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: #d4d4e0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    a { color: #38bdf8; }
+  </style>
 </head>
 <body>
-<h1>Política de Privacidade</h1>
-<p>Sua privacidade é importante para nós.</p>
-<p>Este site pode coletar dados básicos como cookies para melhorar a navegação.</p>
-<p>Não compartilhamos dados com terceiros.</p>
-<p>Contato: suporte@felipestore.site</p>
+  <div class="shell">
+    <h1>Política de Privacidade</h1>
+    <p>Levamos a sua privacidade a sério. Esta política explica como tratamos seus dados.</p>
+
+    <h2>1. Coleta de informações</h2>
+    <p>
+      Podemos coletar informações básicas de navegação (como páginas visitadas e origem do
+      acesso) para análise de desempenho da loja, sempre de forma agregada.
+    </p>
+
+    <h2>2. Uso das informações</h2>
+    <p>
+      Os dados são utilizados para melhorar a experiência do usuário, ajustar campanhas
+      e entender quais produtos fazem mais sentido para o público.
+    </p>
+
+    <h2>3. Cookies e tecnologias semelhantes</h2>
+    <p>
+      Podemos utilizar cookies e pixels de plataformas de anúncios (como TikTok e Meta)
+      para mensurar resultados e otimizar campanhas.
+    </p>
+
+    <h2>4. Compartilhamento</h2>
+    <p>
+      Não vendemos ou alugamos dados pessoais. Informações podem ser compartilhadas apenas
+      com parceiros necessários para operação da loja (por exemplo, meios de pagamento e
+      plataformas de logística), respeitando a legislação aplicável.
+    </p>
+
+    <h2>5. Direitos do titular</h2>
+    <p>
+      Caso queira solicitar esclarecimentos sobre seus dados, entre em contato pelo e-mail
+      <a href="mailto:contato@felipestore.site">contato@felipestore.site</a>.
+    </p>
+
+    <p style="margin-top: 24px;">
+      Em caso de alteração desta política, publicaremos a nova versão nesta mesma página.
+    </p>
+
+    <p style="margin-top: 16px; font-size: 13px; color: #9ca3af;">
+      Última atualização: <strong>novembro de 2025</strong>.
+    </p>
+  </div>
 </body>
 </html>
