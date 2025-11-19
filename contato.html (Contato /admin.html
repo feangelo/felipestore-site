@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - FelipeStore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body{background:#050505;color:#f5f5f5;}
+    header{
+      background:#0d0d0d;color:#fff;padding:15px 30px;
+      display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid #222;
+    }
+    .logo{font-size:22px;font-weight:700;color:#00eaff;}
+    .back-link{color:#fff;text-decoration:none;font-size:14px;}
+    .back-link:hover{text-decoration:underline;}
+    .dashboard{
+      max-width:1000px;margin:30px auto 40px;padding:0 20px;
+    }
+    h1{font-size:24px;margin-bottom:16px;}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-bottom:24px;
+    }
+    .card{
+      background:#101010;border-radius:12px;
+      padding:16px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.7);
+      font-size:13px;
+    }
+    .card strong{font-size:20px;display:block;margin-top:6px;}
+    table{
+      width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;
+    }
+    th,td{
+      padding:8px;border-bottom:1px solid #222;text-align:left;
+    }
+    th{color:#bbbbbb;font-weight:500;}
+    .note{
+      margin-top:18px;font-size:12px;color:#bbbbbb;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">FelipeStore</div>
+  <a class="back-link" href="/">← Voltar para a loja</a>
+</header>
+
+<section class="dashboard">
+  <h1>Painel administrativo (visual)</h1>
+
+  <div class="grid">
+    <div class="card">
+      Vendas (simulado hoje)
+      <strong>R$ 4.597,00</strong>
+      <span style="font-size:11px;color:#8affc1;">+18% vs. ontem</span>
+    </div>
+
+    <div class="card">
+      Pedidos em aberto
+      <strong>12</strong>
+      <span style="font-size:11px;color:#ffd27f;">aguardando pagamento/expedição</span>
+    </div>
+
+    <div class="card">
+      Itens mais vistos
+      <ul style="margin-top:6px;font-size:12px;color:#d0d0d0;">
+        <li>Fone Bluetooth Premium</li>
+        <li>Vibrador Silicone Premium</li>
+        <li>PowerBank Ultra 20.000mAh</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:16px;margin-bottom:6px;">Catálogo atual (exemplo)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fone Bluetooth Premium</td>
+          <td>Eletrônicos</td>
+          <td>R$ 199,90</td>
+          <td>Ativo</td>
+        </tr>
+        <tr>
+          <td>Liquidificador Turbo Inox</td>
+          <td>Casa & Cozinha</td>
+          <td>R$ 129,90</td>
+          <td>Ativo</td>
+        </tr>
+        <tr>
+          <td>Vibrador Silicone Premium</td>
+          <td>Sex Shop</td>
+          <td>R$ 229,90</td>
+          <td>Ativo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+      Este painel é apenas visual por enquanto. Em uma próxima etapa, podemos conectar aqui:
+      API de pedidos, integração com Mercado Livre/Shopee, relatórios reais e edição de produtos.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
