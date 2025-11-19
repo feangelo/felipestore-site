@@ -1,753 +1,225 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FelipeStore - Loja Oficial</title>
-  <style>
-    :root {
-      --bg: #050509;
-      --bg-alt: #0b0b12;
-      --card: #11111a;
-      --primary: #ff2e63;
-      --primary-soft: rgba(255, 46, 99, 0.18);
-      --text-main: #f5f5f7;
-      --text-muted: #a3a3b5;
-      --border-soft: #26263a;
-      --accent: #21f3d0;
-      --radius-lg: 18px;
-      --radius-sm: 10px;
-      --shadow-soft: 0 18px 45px rgba(0,0,0,0.65);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #161626 0, #050509 45%, #000 100%);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 32px 16px 48px;
-      width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 30% 0%, #ffffff 0, #ff2e63 40%, #5d2eff 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 16px rgba(255,46,99,0.6);
-    }
-
-    .logo-mark span {
-      font-weight: 800;
-      font-size: 18px;
-      color: #050509;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo-text strong {
-      font-size: 20px;
-      letter-spacing: 0.04em;
-    }
-
-    .logo-text span {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    nav a {
-      padding: 6px 0;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -4px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      border-radius: 999px;
-      transform-origin: center;
-      transform: scaleX(0);
-      transition: transform 0.18s ease-out;
-    }
-
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
-
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(30px, 4vw, 40px);
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-
-    .hero-copy h1 span {
-      background: linear-gradient(90deg, #ff2e63, #ffc542, #21f3d0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-copy p {
-      font-size: 15px;
-      color: var(--text-muted);
-      max-width: 520px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0 24px;
-    }
-
-    .hero-badge {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: rgba(10, 10, 18, 0.9);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-muted);
-    }
-
-    .hero-badge span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #19e68c;
-      box-shadow: 0 0 8px rgba(25,230,140,0.7);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .btn-primary {
-      padding: 11px 22px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      background: radial-gradient(circle at top left, #fff 0, #ff2e63 35%, #5d2eff 100%);
-      color: #050509;
-      font-weight: 600;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 16px 30px rgba(0,0,0,0.7);
-    }
-
-    .btn-primary span.icon {
-      font-size: 16px;
-    }
-
-    .btn-ghost {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: rgba(9, 9, 16, 0.96);
-      color: var(--text-muted);
-      font-size: 13px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-meta {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-meta strong {
-      color: var(--text-main);
-    }
-
-    .hero-visual {
-      background: radial-gradient(circle at top, rgba(255,46,99,0.32) 0, transparent 55%);
-      padding: 1px;
-    }
-
-    .hero-card {
-      background: linear-gradient(135deg, #151521, #050509);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.04);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .hero-chip {
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: #ff90b2;
-    }
-
-    .hero-kpi {
-      display: flex;
-      gap: 16px;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .hero-kpi span.number {
-      display: block;
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .hero-card-main {
-      border-radius: 14px;
-      padding: 14px;
-      background: radial-gradient(circle at top left, rgba(255,46,99,0.12), rgba(4,4,10,0.96));
-      border: 1px solid rgba(255,255,255,0.03);
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 12px;
-    }
-
-    .hero-card-main h3 {
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .hero-card-main p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .hero-tag {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(3,3,8,0.9);
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-muted);
-    }
-
-    .hero-card-mini {
-      font-size: 11px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      color: var(--text-muted);
-    }
-
-    .hero-bar {
-      height: 5px;
-      border-radius: 999px;
-      background: #14141f;
-      overflow: hidden;
-    }
-
-    .hero-bar span {
-      display: block;
-      height: 100%;
-      width: 72%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-    }
-
-    /* PRODUTOS */
-    .section {
-      margin-top: 8px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .section-header h2 {
-      font-size: 18px;
-    }
-
-    .section-header span {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-    }
-
-    .product-card {
-      background: linear-gradient(145deg, #0b0b14, #050509);
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-soft);
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.7);
-    }
-
-    .product-pill {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-muted);
-      align-self: flex-start;
-    }
-
-    .product-title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .product-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .product-price-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      font-size: 12px;
-      margin-top: 4px;
-    }
-
-    .price-main {
-      font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .price-tag {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .product-cta {
-      margin-top: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .product-cta button {
-      border: none;
-      border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 12px;
-      cursor: pointer;
-      background: #ffffff;
-      color: #050509;
-      font-weight: 600;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border-soft);
-      background: linear-gradient(180deg, rgba(5,5,9,0.6), #050509);
-    }
-
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 16px 16px 22px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-    }
-
-    .footer-links a:hover {
-      color: var(--text-main);
-    }
-
-    .footer-social {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .social-link {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(10,10,18,0.95);
-      cursor: pointer;
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
-    }
-
-    .social-link:hover {
-      transform: translateY(-1px) scale(1.05);
-      border-color: var(--primary);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
-    }
-
-    /* Ícone TikTok (SVG simples) */
-    .social-link svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .hero-visual {
-        order: -1;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FelipeStore - Tecnologia, Estilo e Alta Performance</title>
+
+    <!-- Fonte futurista -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícone -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #f1f1f1;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0d0d0d;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #00f2ff;
+            text-transform: uppercase;
+        }
+
+        header .social a {
+            margin-left: 18px;
+            color: #fff;
+            font-size: 22px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        header .social a:hover {
+            color: #00f2ff;
+        }
+
+        /* HERO */
+        .hero {
+            width: 100%;
+            padding: 80px 40px;
+            text-align: center;
+            background-image: linear-gradient(135deg, #000000 0%, #0b0f1a 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #00f2ff;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #00c4cc;
+        }
+
+        /* Produtos */
+        .products {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #222;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #00f2ff;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #00f2ff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* SOBRE */
+        .sobre {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .sobre p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px 40px;
+            text-align: center;
+            background: #0b0b0b;
+            border-top: 1px solid #1a1a1a;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
-<body>
-  <div class="page">
-    <header>
-      <div class="logo">
-        <div class="logo-mark"><span>F</span></div>
-        <div class="logo-text">
-          <strong>FelipeStore</strong>
-          <span>Loja digital preparada para escalar milhões</span>
-        </div>
-      </div>
 
-      <nav>
-        <a href="#produtos">Produtos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">FelipeStore</div>
+
+        <!-- Redes sociais -->
+        <div class="social">
+            <a href="https://www.tiktok.com/@SEU_USUARIO" target="_blank">📱</a>
+        </div>
     </header>
 
-    <main>
-      <section class="hero" id="sobre">
-        <div class="hero-copy">
-          <div class="hero-badges">
-            <div class="hero-badge">
-              <span class="dot"></span>
-              Pronta para TikTok, Meta e futuros canais
-            </div>
-          </div>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Produtos de Alta Performance & Tecnologia</h1>
+        <p>A FelipeStore traz inovação, estilo e qualidade premium. Aqui você encontra produtos selecionados para melhorar seu dia a dia.</p>
+        <a class="btn" href="#produtos">Ver Produtos</a>
+    </section>
 
-          <h1>
-            Sua nova <span>loja de alta conversão</span><br />
-            conectada com as maiores plataformas.
-          </h1>
-
-          <p>
-            A FelipeStore foi pensada para vender muito: páginas leves, design focado
-            em conversão e pronta para campanhas de tráfego pago e venda orgânica.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#produtos" class="btn-primary">
-              <span class="icon">🛒</span>
-              <span>Ver produtos em destaque</span>
-            </a>
-
-            <!-- Se quiser, depois pode apontar esse link para a página de integração com TikTok -->
-            <a href="/login-tiktok.html" class="btn-ghost">
-              <span>Continuar com TikTok (teste interno)</span>
-            </a>
-          </div>
-
-          <div class="hero-meta">
-            <div><strong>Entrega rápida</strong><br />Envios para todo o Brasil</div>
-            <div><strong>Pagamento seguro</strong><br />Ambiente 100% protegido</div>
-            <div><strong>Atendimento humano</strong><br />Suporte próximo ao cliente</div>
-          </div>
+    <!-- PRODUTOS -->
+    <section id="produtos" class="products">
+        <!-- Exemplo de produto (troque depois) -->
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2020/04/07/14/39/headphones-5015070_960_720.jpg">
+            <h3>Fone Bluetooth Premium</h3>
+            <p>R$ 199,90</p>
+            <button>Comprar Agora</button>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-card">
-            <div class="hero-card-header">
-              <div>
-                <div class="hero-chip">Painel de desempenho</div>
-                <div class="hero-kpi">
-                  <div>
-                    Conversão
-                    <span class="number">4,7%</span>
-                  </div>
-                  <div>
-                    Ticket médio
-                    <span class="number">R$ 247</span>
-                  </div>
-                </div>
-              </div>
-              <div class="hero-card-mini">
-                <span>Clientes recorrentes</span>
-                <div class="hero-bar"><span></span></div>
-                <span>Alta confiança e recompra constante.</span>
-              </div>
-            </div>
-
-            <div class="hero-card-main">
-              <div>
-                <h3>Loja pronta para campanhas agressivas</h3>
-                <p>
-                  Estrutura pensada para tráfego pago, criativos de impacto
-                  e páginas leves que carregam rápido em qualquer conexão.
-                </p>
-
-                <div class="hero-tags">
-                  <span class="hero-tag">Pixel configurado</span>
-                  <span class="hero-tag">Páginas rápidas</span>
-                  <span class="hero-tag">Design responsivo</span>
-                </div>
-              </div>
-
-              <div class="hero-card-mini">
-                <span>Exemplo de resultado diário</span>
-                <div class="hero-bar"><span style="width:82%;"></span></div>
-                <span>Faturamento crescente com estrutura profissional.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="produtos">
-        <div class="section-header">
-          <div>
-            <h2>Produtos em destaque</h2>
-            <span>Exemplos de como sua vitrine pode ficar organizada.</span>
-          </div>
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/box-1833981_960_720.jpg">
+            <h3>Smartwatch Evolution</h3>
+            <p>R$ 299,90</p>
+            <button>Comprar Agora</button>
         </div>
 
-        <div class="products-grid">
-          <article class="product-card">
-            <span class="product-pill">Lançamento</span>
-            <h3 class="product-title">Kit Performance Diária</h3>
-            <p class="product-desc">
-              Combinação pensada para rotina intensa, foco, energia e recuperação.
-            </p>
-            <div class="product-price-row">
-              <div>
-                <span class="price-main">R$ 197,00</span>
-                <div class="price-tag">ou 3x de R$ 65,67</div>
-              </div>
-              <span class="price-tag">Estoque alto</span>
-            </div>
-            <div class="product-cta">
-              <span>Ideal para apresentar em anúncios curtos.</span>
-              <button>Ver detalhes</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <span class="product-pill">Mais vendido</span>
-            <h3 class="product-title">Combo Resultado Rápido</h3>
-            <p class="product-desc">
-              Pacote com alta percepção de valor para aumentar ticket médio e lucro.
-            </p>
-            <div class="product-price-row">
-              <div>
-                <span class="price-main">R$ 297,00</span>
-                <div class="price-tag">ou 6x de R$ 49,50</div>
-              </div>
-              <span class="price-tag">Estoque moderado</span>
-            </div>
-            <div class="product-cta">
-              <span>Perfeito para campanhas de escala.</span>
-              <button>Ver detalhes</button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <span class="product-pill">Oferta estratégica</span>
-            <h3 class="product-title">Produto de entrada</h3>
-            <p class="product-desc">
-              Ticket mais baixo, pensado para trazer novos clientes e gerar base quente.
-            </p>
-            <div class="product-price-row">
-              <div>
-                <span class="price-main">R$ 49,90</span>
-                <div class="price-tag">ou 2x de R$ 24,95</div>
-              </div>
-              <span class="price-tag">Alta demanda</span>
-            </div>
-            <div class="product-cta">
-              <span>Perfeito para criativos virais no TikTok.</span>
-              <button>Ver detalhes</button>
-            </div>
-          </article>
+        <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2017/03/02/09/17/power-bank-2110805_960_720.jpg">
+            <h3>PowerBank Ultra 20.000mAh</h3>
+            <p>R$ 149,90</p>
+            <button>Comprar Agora</button>
         </div>
-      </section>
+    </section>
 
-      <section class="section" id="contato">
-        <div class="section-header">
-          <div>
-            <h2>Atendimento e suporte</h2>
-            <span>Deixe claro para o cliente que ele não está comprando de qualquer lugar.</span>
-          </div>
-        </div>
-        <p style="font-size:13px;color:var(--text-muted);max-width:620px;">
-          Aqui você pode colocar WhatsApp oficial, e-mail de suporte ou formulário de contato.
-          Quanto mais clara for a comunicação, mais confiança o cliente sente na hora de pagar.
-        </p>
-      </section>
-    </main>
-  </div>
+    <!-- SOBRE -->
+    <section class="sobre">
+        <h2>Sobre a FelipeStore</h2>
+        <p>A FelipeStore nasceu com a missão de entregar produtos de qualidade, alta durabilidade e foco total na experiência do cliente. Estamos construindo uma marca forte, moderna e alinhada com as tendências de tecnologia e lifestyle.</p>
+    </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <span>© <span id="year"></span> FelipeStore. Todos os direitos reservados.</span>
-        <a href="/termos.html">Termos de Serviço</a>
-        <a href="/privacy.html">Política de Privacidade</a>
-      </div>
+    <!-- FOOTER -->
+    <footer>
+        © 2025 FelipeStore — Todos os direitos reservados.
+    </footer>
 
-      <div class="footer-social">
-        <span>Nos acompanhe:</span>
-        <!-- Ícone TikTok apontando para o seu perfil -->
-        <a
-          href="https://www.tiktok.com/@felipeangelo08"
-          target="_blank"
-          rel="noopener"
-          class="social-link"
-          aria-label="TikTok da FelipeStore"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              fill="#ffffff"
-              d="M16.5 5.2c.6.6 1.4 1.1 2.3 1.3l1 .2v3.1a6.2 6.2 0 0 1-3.4-1.1v5.6a5.6 5.6 0 1 1-5.6-5.6 5.8 5.8 0 0 1 1.1.1v3a2.7 2.7 0 0 0-1.1-.2 2.6 2.6 0 1 0 2.6 2.6V2.5h3.1v2.7z"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
 
 
 
