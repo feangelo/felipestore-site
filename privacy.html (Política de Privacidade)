@@ -8,58 +8,125 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
-        body{background:#f5f5f5;color:#222;}
+
+        body{
+            background:#050505;
+            color:#f5f5f5;
+        }
+
         header{
-            background:#0d0d0d;color:#fff;padding:15px 30px;
-            display:flex;align-items:center;justify-content:space-between;
+            background:#0d0d0d;
+            color:#fff;
+            padding:15px 30px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            border-bottom:1px solid #222;
         }
-        .logo{font-size:22px;font-weight:700;color:#00eaff;}
+
+        .logo{
+            font-size:22px;
+            font-weight:700;
+            color:#00eaff;
+        }
+
+        .back-link{
+            color:#fff;
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        .back-link:hover{
+            text-decoration:underline;
+        }
+
         .legal-wrapper{
-            max-width:900px;margin:40px auto 30px;background:#fff;
-            padding:25px 20px;border-radius:10px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+            max-width:900px;
+            margin:40px auto 30px;
+            background:#0f0f0f;
+            padding:25px 20px 30px;
+            border-radius:10px;
+            box-shadow:0 2px 12px rgba(0,0,0,0.7);
         }
-        h1{font-size:26px;margin-bottom:10px;}
-        h3{font-size:18px;margin-top:18px;margin-bottom:6px;}
-        p{font-size:14px;line-height:1.7;margin-bottom:6px;}
-        a{color:#00c4cc;text-decoration:none;}
-        a:hover{text-decoration:underline;}
+
+        h1{
+            font-size:26px;
+            margin-bottom:12px;
+        }
+
+        h3{
+            font-size:18px;
+            margin-top:18px;
+            margin-bottom:6px;
+        }
+
+        p{
+            font-size:14px;
+            line-height:1.7;
+            margin-bottom:6px;
+            color:#e0e0e0;
+        }
+
+        a{
+            color:#00eaff;
+            text-decoration:none;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
+
         footer{
-            padding:20px 30px;text-align:center;background:#0d0d0d;
-            color:#aaa;font-size:13px;
+            padding:20px 30px;
+            text-align:center;
+            background:#0d0d0d;
+            color:#aaa;
+            font-size:13px;
+            border-top:1px solid #222;
         }
-        footer a{color:#00eaff;margin:0 6px;text-decoration:none;}
-        footer a:hover{text-decoration:underline;}
+
+        footer a{
+            color:#00eaff;
+            margin:0 6px;
+            text-decoration:none;
+        }
+
+        footer a:hover{
+            text-decoration:underline;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">FelipeStore</div>
-    <a href="/" style="color:#fff;text-decoration:none;font-size:14px;">← Voltar para a loja</a>
+    <a class="back-link" href="/">← Voltar para a loja</a>
 </header>
 
 <div class="legal-wrapper">
     <h1>Política de Privacidade</h1>
     <p>Levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos seus dados pessoais ao utilizar a FelipeStore.</p>
 
-    <h3>1. Dados Coletados</h3>
-    <p>Podemos coletar dados como nome, e-mail, telefone, endereço de entrega, CPF (quando necessário para emissão de nota fiscal) e informações de navegação (como páginas acessadas e tempo de permanência).</p>
+    <h3>1. Dados coletados</h3>
+    <p>Podemos coletar dados como nome, e-mail, telefone, endereço de entrega, CPF (quando necessário para emissão de nota fiscal) e informações de navegação, como páginas acessadas e tempo de permanência no site.</p>
 
-    <h3>2. Uso das Informações</h3>
-    <p>Utilizamos seus dados para processar pedidos, melhorar a experiência de navegação, enviar comunicações sobre pedidos, ofertas e novidades (quando autorizado) e cumprir exigências legais e fiscais.</p>
+    <h3>2. Como usamos seus dados</h3>
+    <p>Utilizamos seus dados para processar pedidos, enviar confirmações, oferecer suporte, melhorar a experiência de navegação, apresentar ofertas relevantes e cumprir obrigações legais e fiscais.</p>
 
-    <h3>3. Cookies e Tecnologias de Rastreamento</h3>
-    <p>Podemos usar cookies e ferramentas de análise para entender melhor o comportamento dos usuários no site e melhorar nossa performance. Você pode ajustar as configurações de cookies diretamente no seu navegador.</p>
+    <h3>3. Cookies e tecnologias de rastreamento</h3>
+    <p>Podemos usar cookies e ferramentas de análise para entender melhor como o site é utilizado e melhorar nossa performance. Você pode controlar o uso de cookies nas configurações do seu navegador.</p>
 
-    <h3>4. Compartilhamento de Dados</h3>
-    <p>Não vendemos seus dados pessoais. Eles podem ser compartilhados apenas com parceiros essenciais para a operação, como meios de pagamento, transporte e plataformas de análise, sempre com foco na segurança e na prestação do serviço.</p>
+    <h3>4. Compartilhamento de informações</h3>
+    <p>Não vendemos seus dados pessoais. Eles podem ser compartilhados apenas com parceiros que participam diretamente da operação (por exemplo: meios de pagamento, transporte e plataformas de análise), sempre seguindo padrões de segurança.</p>
 
     <h3>5. Segurança</h3>
-    <p>Adotamos boas práticas de segurança para proteger seus dados contra acessos não autorizados, vazamentos ou alterações indevidas. Ainda assim, nenhum sistema é 100% imune a riscos, e recomendamos que o usuário também proteja suas informações.</p>
+    <p>Adotamos boas práticas de segurança para proteger seus dados contra acessos não autorizados, vazamentos ou alterações indevidas. Mesmo assim, nenhum sistema é 100% imune a riscos.</p>
 
-    <h3>6. Direitos do Titular de Dados</h3>
-    <p>De acordo com a legislação brasileira (LGPD), você pode solicitar acesso, correção ou exclusão dos seus dados pessoais, bem como retirar consentimentos concedidos. Para isso, basta entrar em contato pelos canais de suporte disponíveis no site.</p>
+    <h3>6. Direitos do titular de dados</h3>
+    <p>De acordo com a legislação brasileira (LGPD), você pode solicitar acesso, correção ou exclusão dos seus dados pessoais, bem como retirar consentimentos concedidos. Para isso, entre em contato pelos canais oficiais de atendimento da FelipeStore.</p>
+
+    <h3>7. Atualizações desta política</h3>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente estará sempre disponível nesta página.</p>
 </div>
 
 <footer>
@@ -70,4 +137,5 @@
 
 </body>
 </html>
+
 
