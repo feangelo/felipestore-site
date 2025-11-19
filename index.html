@@ -1,749 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>FelipeStore • Loja que faz parte da sua vida</title>
-  <meta name="description" content="FelipeStore é a loja digital que traz produtos selecionados para casa, organização, bem-estar e vida adulta discreta, com entrega em todo o Brasil.">
-
-  <!-- Metatags básicas para TikTok / redes -->
-  <meta property="og:title" content="FelipeStore • Loja que faz parte da sua vida">
-  <meta property="og:description" content="Sua loja digital, online e preparada para automações e integrações futuras.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://felipestore.site/">
-
-  <style>
-    :root {
-      --bg: #050509;
-      --bg-elevated: #0c0c14;
-      --bg-soft: #14141f;
-      --primary: #2ef2a1;
-      --primary-soft: rgba(46, 242, 161, 0.12);
-      --accent: #6c5ce7;
-      --text: #f9fafb;
-      --muted: #a1a1b3;
-      --border: #262637;
-      --danger: #ff7675;
-      --radius-lg: 18px;
-      --radius-md: 12px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.65);
-      --shadow-soft-up: 0 -10px 40px rgba(0, 0, 0, 0.7);
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle at top, #141427 0, #050509 60%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .shell {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 24px 20px 72px;
-    }
-
-    /* HEADER */
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 32px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: conic-gradient(
-        from 140deg,
-        #2ef2a1,
-        #33c7ff,
-        #a855ff,
-        #ff6b9c,
-        #2ef2a1
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04),
-        0 8px 20px rgba(0, 0, 0, 0.7);
-    }
-
-    .brand-logo span {
-      font-weight: 800;
-      font-size: 14px;
-      color: #020205;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-text strong {
-      font-size: 18px;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-text span {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .tag-badge {
-      border-radius: var(--radius-pill);
-      padding: 6px 14px;
-      font-size: 11px;
-      border: 1px solid rgba(46, 242, 161, 0.28);
-      background: radial-gradient(circle at top left, #1f2933 0, #050509 70%);
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .tag-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
-      margin-bottom: 40px;
-    }
-
-    .hero-main-title {
-      font-size: clamp(32px, 4vw, 40px);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-      margin-bottom: 14px;
-    }
-
-    .hero-main-title span.highlight {
-      background: linear-gradient(90deg, #2ef2a1, #60a5ff);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 460px;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .btn {
-      border-radius: var(--radius-pill);
-      padding: 10px 18px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s, border-color 0.2s;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #2ef2a1, #60a5ff);
-      color: #020205;
-      box-shadow: 0 12px 24px rgba(46, 242, 161, 0.15);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 38px rgba(46, 242, 161, 0.22);
-    }
-
-    .btn-ghost {
-      border-color: rgba(148, 163, 184, 0.4);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.6);
-    }
-
-    .btn-ghost:hover {
-      border-color: rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .hero-trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .hero-trust span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-    }
-
-    .hero-trust strong {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    .hero-card {
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top left, #111827 0, #050509 70%);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 11px;
-    }
-
-    .hero-pill {
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      background: #0b1120;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      color: var(--muted);
-    }
-
-    .hero-pill span {
-      color: var(--primary);
-      font-weight: 500;
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      font-size: 12px;
-    }
-
-    .metric {
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 12px;
-      padding: 10px 10px 9px;
-      border: 1px solid rgba(31, 41, 55, 0.8);
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 11px;
-      margin-bottom: 4px;
-    }
-
-    .metric-value {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .metric-tag {
-      font-size: 10px;
-      color: #22c55e;
-      margin-left: 6px;
-    }
-
-    .metric-tag.danger {
-      color: var(--danger);
-    }
-
-    .hero-card-footer {
-      margin-top: 8px;
-      font-size: 11px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .hero-label-automation {
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(96, 165, 250, 0.6);
-      color: #dbeafe;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    /* CATEGORIAS */
-
-    .section {
-      margin-top: 18px;
-      margin-bottom: 32px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: 17px;
-      font-weight: 600;
-    }
-
-    .section-subtitle {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 11px;
-    }
-
-    .pill-soft {
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.7);
-      color: var(--muted);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .card {
-      background: var(--bg-elevated);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 14px 14px 12px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .card-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .card-body {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .card-tag {
-      margin-top: auto;
-      font-size: 11px;
-      color: var(--primary);
-    }
-
-    /* FAIXA DE CONFIANÇA */
-
-    .trust-strip {
-      margin-top: 16px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(90deg, #111827, #020617);
-      border: 1px solid rgba(38, 38, 68, 0.9);
-      padding: 10px 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .trust-strip strong {
-      color: #e5e7eb;
-    }
-
-    /* RODAPÉ */
-
-    footer {
-      margin-top: auto;
-      border-top: 1px solid var(--border);
-      background: linear-gradient(to top, rgba(3, 7, 18, 0.96), transparent);
-      box-shadow: var(--shadow-soft-up);
-    }
-
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 16px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      font-size: 12px;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      max-width: 260px;
-    }
-
-    .footer-brand-title {
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .footer-brand-text {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 18px;
-    }
-
-    .footer-nav a {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .footer-nav a:hover {
-      color: var(--text);
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .social-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .social-label {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    /* Botão de “ícone” do Instagram sem link */
-    .social-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top left, #f97316 0, #ec4899 40%, #6366f1 80%);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      cursor: default; /* SEM clique */
-    }
-
-    .social-icon svg {
-      width: 15px;
-      height: 15px;
-      fill: none;
-      stroke: white;
-      stroke-width: 1.6;
-    }
-
-    /* RESPONSIVO */
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-main-title {
-        font-size: 28px;
-      }
-
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-metrics {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FelipeStore – Login TikTok</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0e0e12;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .tiktok-btn {
+            background: #000;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            border: 2px solid #ff0050;
+            transition: 0.2s;
+        }
+
+        .tiktok-btn:hover {
+            transform: scale(1.05);
+            background: #ff0050;
+            border-color: #fff;
+        }
+
+        .profile-link {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .profile-link a {
+            color: #05f2f2;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="page">
-    <main class="shell">
-      <!-- HEADER -->
-      <header>
-        <div class="brand">
-          <div class="brand-logo">
-            <span>FS</span>
-          </div>
-          <div class="brand-text">
-            <strong>FelipeStore</strong>
-            <span>Loja multicategoria • Brasil</span>
-          </div>
-        </div>
+    <h1>Integração TikTok – FelipeStore</h1>
+    <p>Use o botão abaixo para iniciar a autenticação via TikTok.</p>
 
-        <div class="tag-badge">
-          <span class="tag-dot"></span>
-          <span>Online, em produção e pronta para escalar</span>
-        </div>
-      </header>
+    <!--  
+        ⬇️ ESTE É O BOTÃO QUE O TIKTOK QUER VER NO VÍDEO  
+        Troque CLIENT_KEY e REDIRECT_URI quando terminar
+    -->
 
-      <!-- HERO -->
-      <section class="hero" id="topo">
-        <div>
-          <h1 class="hero-main-title">
-            Uma loja pra <span class="highlight">tudo</span> que faz parte
-            <span class="highlight">da sua vida.</span>
-          </h1>
-          <p class="hero-subtitle">
-            Produtos para casa, organização, bem-estar, cuidados pessoais e linha adulta discreta.
-            Tudo em um só lugar, com visão de automação e crescimento em grande escala.
-          </p>
+    <a class="tiktok-btn"
+       href="https://www.tiktok.com/auth/authorize/?client_key=CLIENT_KEY_AQUI&response_type=code&scope=user.info.basic&redirect_uri=REDIRECT_URI_AQUI&state=felipestore123">
+        Continuar com TikTok
+    </a>
 
-          <div class="hero-cta-row">
-            <a class="btn btn-primary" href="#categorias">
-              Ver categorias e ideias
-            </a>
-            <a class="btn btn-ghost" href="#sobre">
-              Entender como a FelipeStore funciona
-            </a>
-          </div>
-
-          <div class="hero-trust">
-            <span><strong>Online</strong> 24h, preparado para TikTok, Meta e integrações</span>
-            <span><strong>Baseado em dados</strong> e testes de produtos</span>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Resumo da operação">
-          <div class="hero-card-header">
-            <div>
-              <div class="hero-label-automation">Painel de performance</div>
-              <p style="margin-top: 6px; font-size: 12px; color: var(--muted);">
-                Visão rápida da operação pensada para escalar com tráfego pago.
-              </p>
-            </div>
-          </div>
-
-          <div class="hero-metrics">
-            <div class="metric">
-              <div class="metric-label">Ticket médio potencial</div>
-              <div class="metric-value">R$ 120<span class="metric-tag">+38%</span></div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">Combos &amp; Upsell</div>
-              <div class="metric-value">Alto<span class="metric-tag">estratégico</span></div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">Reposição de estoque</div>
-              <div class="metric-value">Automática<span class="metric-tag danger">sem ruptura</span></div>
-            </div>
-          </div>
-
-          <div class="hero-card-footer">
-            <span>Arquitetada para receber automações de IA, esteira de anúncios e testes A/B.</span>
-          </div>
-        </aside>
-      </section>
-
-      <!-- CATEGORIAS -->
-      <section class="section" id="categorias">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Categorias principais da FelipeStore</h2>
-            <p class="section-subtitle">
-              Pensado para produtos que giram bem com anúncios, vídeos curtos e ofertas por tempo limitado.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="card-label">Casa &amp; Utilidades</div>
-            <div class="card-title">Organização inteligente do dia a dia</div>
-            <p class="card-body">
-              Itens que facilitam rotina, economizam tempo e geram aquele “antes e depois” perfeito
-              para criativos de vendas.
-            </p>
-            <div class="card-tag">Ótimo para vídeos de transformação</div>
-          </article>
-
-          <article class="card">
-            <div class="card-label">Bem-estar &amp; Cuidados</div>
-            <div class="card-title">Produtos que o cliente sente diferença</div>
-            <p class="card-body">
-              Cuidados pessoais, autocuidado e performance. Ideal para storytelling e provas sociais.
-            </p>
-            <div class="card-tag">Indicados para campanhas recorrentes</div>
-          </article>
-
-          <article class="card">
-            <div class="card-label">Linha adulta discreta</div>
-            <div class="card-title">Privacidade, descrição e embalagens neutras</div>
-            <p class="card-body">
-              Produtos pensados para um público que quer conforto e sigilo total, com comunicação madura.
-            </p>
-            <div class="card-tag">Comunicação adulta &amp; respeitosa</div>
-          </article>
-        </div>
-
-        <div class="trust-strip" id="sobre">
-          <strong>FelipeStore é construída para escalar junto com o tráfego.</strong>
-          <span>Estrutura limpa, leve e preparada para automações, captura de dados e testes de produto.</span>
-        </div>
-      </section>
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-brand-title">FelipeStore</div>
-            <p class="footer-brand-text">
-              Uma loja digital criada para crescer com dados, automação e criatividade,
-              mantendo a experiência do cliente simples e segura.
-            </p>
-          </div>
-
-          <nav class="footer-nav" aria-label="Navegação do site">
-            <a href="#topo">Início</a>
-            <a href="#categorias">Categorias</a>
-            <a href="#sobre">Sobre a operação</a>
-          </nav>
-
-          <nav class="footer-nav" aria-label="Links legais">
-            <a href="/termos.html">Termos de Serviço</a>
-            <a href="/privacidade.html">Política de Privacidade</a>
-          </nav>
-        </div>
-
-        <div class="footer-bottom">
-          <span>© <span id="year"></span> FelipeStore. Todos os direitos reservados.</span>
-
-          <div class="social-row">
-            <span class="social-label">Presença social (em construção):</span>
-            <!-- Ícone do Instagram SEM link -->
-            <div class="social-icon" aria-label="Instagram em breve">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="4" y="4" width="16" height="16" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17" cy="7" r="1.2" fill="white" stroke="none"></circle>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Ano automático no rodapé
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <div class="profile-link">
+        Seu TikTok pessoal (usado para testes):  
+        <br>
+        <a href="https://www.tiktok.com/@felipeangelo08" target="_blank">@felipeangelo08</a>
+    </div>
 </body>
 </html>
-
 
 
